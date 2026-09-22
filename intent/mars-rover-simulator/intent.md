@@ -12,6 +12,8 @@ Un simulateur qui reçoit un point de départ (position x, y et orientation N/S/
 
 Si un obstacle bloque l'avancée du rover, celui-ci reste immobile. Lorsque le rover atteint un bord de la carte, il réapparaît sur le bord opposé (la carte représente la surface d'une planète, donc elle boucle sur elle-même). Le simulateur affiche la position et l'orientation finales du rover, au format `{x,y,Direction}` (par exemple `{2,3,N}`), après exécution de toutes les commandes.
 
+Le simulateur trace également le déplacement complet du rover sur la carte : une fois qu'une case a été traversée, quel que soit le sens du déplacement, un point médian (·) y est laissé comme marque de passage.
+
 ## Utilisateurs et systèmes concernés
 L'équipe sur Terre, qui transmet les commandes au simulateur sous forme de ligne de commande.
 
@@ -24,6 +26,7 @@ L'équipe sur Terre, qui transmet les commandes au simulateur sous forme de lign
 - Le rover peut avancer ou tourner de 90° à droite ou à gauche.
 - Le rover reste immobile lorsqu'un obstacle bloque son avancée.
 - La carte boucle sur elle-même : un rover qui sort d'un bord réapparaît sur le bord opposé.
+- Le passage du rover sur une case est marqué par un point médian (·), quel que soit le sens de déplacement.
 - Le format de sortie est `{x,y,Direction}`.
 
 ## Questions ouvertes
